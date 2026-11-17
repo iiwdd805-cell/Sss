@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>المشاعر ليست عدوك</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;700&display=swap">
+<style>
+:root{
+  --bg:#EDF1F3; --paper:#F9FBFB; --ink:#13232B; --muted:#4F6670; --accent:#0B7E86; --accent-soft:#D6F1F2; --sun:#D99A1E; --line:#B9C8CE;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#0E171B; --paper:#15232A; --ink:#E6EEF0; --muted:#9DB3BB; --accent:#5CC3CC; --accent-soft:#1B3A40; --sun:#F0B94A; --line:#2D434B; color-scheme:dark;}
+}
+:root[data-theme="dark"]{--bg:#0E171B; --paper:#15232A; --ink:#E6EEF0; --muted:#9DB3BB; --accent:#5CC3CC; --accent-soft:#1B3A40; --sun:#F0B94A; --line:#2D434B; color-scheme:dark;}
+html{height:auto;scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"IBM Plex Sans Arabic","Geeza Pro","Segoe UI",Tahoma,sans-serif;font-size:1.08rem;line-height:1.95;font-weight:400;}
+h1,h2,h3,.k{font-family:"IBM Plex Sans Arabic","Geeza Pro","Segoe UI",Tahoma,sans-serif;font-weight:700;line-height:1.35;margin:0}
+.wrap{max-width:900px;margin:0 auto;padding:0 20px}
+.cover{background:var(--accent);color:#fff;padding:56px 0 48px;margin-bottom:40px;position:relative;overflow:hidden}
+:root:not([data-theme="light"]) .cover{color:#fff}
+@media (prefers-color-scheme:dark){.cover{background:#12343A;color:var(--ink)}}
+.cover h1{font-size:clamp(2.6rem,10vw,5.2rem);max-width:12ch}
+.cover p{max-width:34ch;font-size:1.25rem;margin:18px 0 0;opacity:.92}
+.by{display:inline-block;margin-top:26px;padding-top:12px;border-top:2px solid var(--sun);font-family:"IBM Plex Sans Arabic",sans-serif;font-size:1.15rem}
+.logo{display:block;width:150px;max-width:50%;height:auto;background:#fff;padding:10px 14px;border-radius:10px;margin-bottom:26px}
+.bar{display:block;width:72px;height:6px;background:var(--sun);margin-bottom:22px;border-radius:3px}
+.lead{background:var(--paper);padding:28px 24px;border-radius:6px;border-right:6px solid var(--sun)}
+.lead p{margin:0 0 14px}
+.lead p:last-child{margin:0}
+.lead .q{font-family:"IBM Plex Sans Arabic",sans-serif;font-size:1.35rem;line-height:1.8;color:var(--accent)}
+@media(min-width:760px){.cols{columns:2;column-gap:40px}.cols p{margin:0 0 14px;break-inside:avoid-column}}
+section{margin:56px 0}
+h2{font-size:clamp(1.7rem,5vw,2.4rem);margin-bottom:18px}
+.pull{font-family:"IBM Plex Sans Arabic",sans-serif;font-size:clamp(1.5rem,4.6vw,2.2rem);line-height:1.6;color:var(--accent);padding:10px 0;margin:36px 0;border-top:2px solid var(--line);border-bottom:2px solid var(--line)}
+.pair{display:grid;gap:18px;grid-template-columns:1fr}
+@media(min-width:760px){.pair{grid-template-columns:1fr 1fr}}
+.card{background:var(--paper);padding:24px;border-radius:4px}
+.card h3{font-size:1.5rem;margin-bottom:8px}
+.card.a{border-top:6px solid var(--sun)}
+.card.s{border-top:6px solid var(--accent)}
+.card p{margin:0}
+.steps{list-style:none;margin:0;padding:0;counter-reset:s}
+.steps li{counter-increment:s;background:var(--paper);margin:0 0 16px;padding:20px 22px 20px 20px;border-radius:4px;display:grid;grid-template-columns:52px 1fr;gap:14px}
+.steps li::before{content:counter(s);font-family:"IBM Plex Sans Arabic",sans-serif;font-size:2.4rem;line-height:1.2;color:var(--sun)}
+.steps h3{font-size:1.3rem;margin-bottom:4px}
+.steps p{margin:0}
+.group{margin:44px 0 12px;font-family:"IBM Plex Sans Arabic",sans-serif;font-size:1.05rem;color:var(--muted);padding-bottom:6px;border-bottom:1px solid var(--line)}
+.end{background:var(--accent-soft);padding:34px 24px;border-radius:6px}
+.end h2{color:var(--accent)}
+.ask{margin:48px 0 0;padding:26px 24px;border:2px dashed var(--accent);border-radius:6px;font-family:"IBM Plex Sans Arabic",sans-serif;font-size:1.2rem;line-height:1.9}
+footer{height:56px}
+@media(prefers-reduced-motion:no-preference){.cover h1{animation:in .8s ease-out both}@keyframes in{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}}
+</style>
+</head>
+<body>
+<header class="cover"><div class="wrap">
+  <img class="logo" alt="شعار عبور رعاية وتأهيل" src="data:image/png;base64,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">
+  <span class="bar"></span>
+  <h1>المشاعر ليست عدوك</h1>
+  <p>كيف تتعامل مع الغضب والحزن، وتتغلب على التفكير الزائد</p>
+  <div class="by">الأخصائية الاجتماعية: وعد الكريديس</div>
+</div></header>
+
+<main class="wrap">
+  <div class="lead">
+    <p class="q">تخيل أنك تسير في طريقك وفجأة شعرت بألم حاد في جسدك. هل تتجاهله وتستمر في المشي قائلاً لنفسك: «أنا قوي ولا ألتفت لهذه الأمور»، أم تتوقف لحظة لتعرف السبب وتتعامل معه؟</p>
+  </div>
+
+  <div class="cols" style="margin-top:32px">
+    <p>المشكلة الأكبر في مجتمعاتنا هي أننا نتعامل مع الضغط النفسي ومشاعرنا الداخلية بنفس هذه الطريقة المجهدة. منذ الصغر، ينشأ في أذهاننا تصور غير واقعي عن القوة والنضج الذاتي، وكأن الشخص القوي هو من لا يحزن، ولا يغضب، ويحتفظ ببرود تام مهما كانت الظروف. نكبر ونحن نظن أن كتمان المشاعر شجاعة، وأن خنق الانفعالات ثبات.</p>
+    <p>لكن الواقع العملي يعلمنا شيئاً مختلفاً تماماً: المشاعر التي تكتمها لا تموت، بل تُدفن حية، وتظل تتراكم في العتمة حتى تخرج في وقت غير مناسب على شكل عصبية مفرطة لأتفه الأسباب، أو قلق دائم وتفكير زائد (Overthinking) لا تعرف مصدره، أو حتى إنهاك جسدي ونفسي يعطل حياتك.</p>
+  </div>
+
+  <div class="pull">المشاعر التي تكتمها لا تموت، بل تُدفن حية.</div>
+
+  <section>
+    <h2>لماذا نغضب ونحزن؟</h2>
+    <p>الحقيقة البسيطة التي نحتاج للاتفاق عليها هي أن المشاعر ليست أعداءنا. هي مجرد إشارات تنبيه، تماماً كالمؤشرات التي تضيء في لوحة قيادة السيارة لتخبرك أن هناك ما يحتاج إلى مراجعة وصيانة.</p>
+    <div class="pair">
+      <div class="card a"><h3>الغضب</h3><p>ليس دليلاً على أنك شخص سيئ، بل هو إشارة واضحة تنبهك إلى أن أحداً قد تجاوز حدودك الشخصية، أو أن هناك موقفاً غير عادل حدث معك ويحتاج إلى حسم.</p></div>
+      <div class="card s"><h3>الحزن</h3><p>ليس دليلاً على الضعف، بل هو الطريقة الفطرية التي يستوعب بها عقلك وقلبك تجربة الفقد أو الخسارة، ليأخذ وقته في التكيف مع الواقع الجديد.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>خطوات عملية للتعامل مع الغضب والحزن بوعي</h2>
+    <p>لكي نتعامل مع هذه اللحظات بذكاء وواقعية، بعيداً عن التعقيد التنظيري وكلام التنمية البشرية المستهلك، هناك مراحل أساسية للتفريغ النفسي:</p>
+    <ol class="steps">
+      <li><div><h3>اعترف بما تشعر به بينك وبين نفسك أولاً</h3><p>لا داعي للتمثيل أو التظاهر بأن كل شيء على ما يرام وأنت تتألم من الداخل. قلها لنفسك بوضوح وثبات: «أنا غاضب اليوم بسبب ما حدث»، أو «أنا أشعر بالحزن من هذه الخسارة». مجرد إعطاء الشعور اسمه الحقيقي يزيل نصف الثقل والتشتت الذي تحدثه العاطفة المجهولة.</p></div></li>
+      <li><div><h3>افصل تماماً بين الشعور والتصرف</h3><p>من حقك الكامل أن تشعر بالغضب إلى أقصى حد، لكن ليس من الحكمة ولا من المروءة أن تتصرف بطيش أو تتخذ قرارات حاسمة وأنت في قمة انفعالك. الشعور حالة داخلية استوعبها، أما السلوك فهو قرارك الواعي ومسؤوليتك الكاملة أمام نفسك والآخرين.</p></div></li>
+      <li><div><h3>امنح الحزن مساحته الطبيعية ليفرغ</h3><p>الحياة لن تتوقف إذا جلست مع نفسك ساعة أو يوماً، وسكت قليلاً لتستوعب ما حدث دون أن تكلف نفسك عناء الظهور بمظهر الشخص الخارق الذي لا يهتز. المشاعر كالأمطار، إذا لم تسمح لها بالنزول والتصريف بشكل طبيعي، ستتحول إلى سد محبوس يهدد بالانفجار في أي لحظة.</p></div></li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>ماذا بعد الاعتراف؟</h2>
+    <p>هنا تحديداً تبدأ مرحلة الفعل؛ لأن الوعي الذاتي هو مجرد فتح الباب، أما الخروج من الغرفة فيحتاج منك خطوة للداخل. كثيرون يظنون أن رحلة التعافي وتجاوز المواقف الصعبة تنتهي عند التسمية، فينتظرون أن يختفي الألم أو الغضب بسحر ساحر. لكن المشاعر طاقة، وإن لم تحولها إلى استجابة عملية، ستتحول هي إلى دوامة من التفكير الزائد والتوتر المكتوم.</p>
+    <div class="group">ما تفعله تالياً، خطوة بخطوة، لتفريغ هذه الطاقة</div>
+    <ol class="steps">
+      <li><div><h3>احسم المسألة بأسئلة واقعية</h3><p>اسأل نفسك ببرود: هل هذا الأمر تحت سيطرتي ويمكنني إصلاحه، أم أنه أمر واقع ويجب عليّ تقبله؟ إن كان تحت سيطرتك، اكتب خطوة واحدة بسيطة يمكنك اتخاذها اليوم وابدأ بها فوراً. وإن كان خارج سيطرتك، حوّل تركيزك إلى كيفية حماية روتينك ونفسك من آثاره.</p></div></li>
+      <li><div><h3>فرّغ الطاقة جسدياً</h3><p>الغضب والحزن يفرزان هرمونات توتر حقيقية في الجسد. لا تجلس في مكانك وتنتظر أن تهدأ؛ اخرج للمشي، مارس أي رياضة، أو قم بأي عمل يدوي يستهلك طاقتك البدنية. الحركة هي أسرع وسيلة لتسريح طاقة المشاعر المتبقية.</p></div></li>
+      <li><div><h3>أغلق الملف وعد للميدان</h3><p>لا تجعل الجلسة مع النفس مفتوحة طوال اليوم. حدد لنفسك وقتاً ينتهي فيه التفكير، ثم اغسل وجهك وعد لمسؤولياتك أو عملك أو كتابتك. الانشغال بمهام حقيقية ذات قيمة هو أفضل مطهر للقلب والعقل بعد تفريغ المشاعر.</p></div></li>
+    </ol>
+  </section>
+
+  <section class="end">
+    <h2>الوعي محطة وليس ملجأ</h2>
+    <p>القوة الحقيقية لا تكمن في ارتداء قناع التبلد والادعاء بأنك لا تتأثر، بل تظهر في قدرتك على الجلوس مع نفسك، وفهم ما يوجعك، ومعالجته بهدوء وثبات، ثم الوقوف من جديد لإكمال طريقك. الوعي الذاتي ليس ملجأً نعيش فيه، بل هو محطة استراحة قصيرة لتزويد الوقود، ثم العودة للمسار بشجاعة.</p>
+  </section>
+
+  <div class="ask">كيف تتعامل عادةً مع لحظات الغضب أو الحزن الشديد؟ وما هي الخطوة الأولى التي تعتمد عليها لتفرغ هذه الطاقة وتستعيد اتزانك؟</div>
+</main>
+<footer></footer>
+</body>
+</html>
